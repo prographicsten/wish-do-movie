@@ -29,14 +29,15 @@ const loadVideoContainer = async (categoryId) => {
     const videoData = await loadVideos.json();
     const videoDataLoading = videoData.data.length;
     // console.log(videoData.data);
+    
+    // no content available
+    const noVideoAvailable = document.getElementById('no_content_available');
+    noVideoAvailable.innerHTML = '';
 
     // video container definition by id (videos_container)
     const videoContainerDefinition = document.getElementById('videos_container');
     videoContainerDefinition.innerHTML = '';
 
-    // no content available
-    const noVideoAvailable = document.getElementById('no_content_available');
-    noVideoAvailable.innerHTML = '';
 
     if(videoDataLoading > 0) {
         videoData.data.forEach(cateVideo => {
