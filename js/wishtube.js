@@ -27,6 +27,7 @@ const loadVideoContainer = async (categoryId) => {
     // load category_id fetch
     const loadVideos = await fetch(`https://openapi.programming-hero.com/api/videos/category/${categoryId}`)
     const videoData = await loadVideos.json();
+    const transitionSortForViews = await videoData;
     const videoDataLoading = videoData.data.length;
     // console.log(videoData.data);
     
@@ -41,7 +42,7 @@ const loadVideoContainer = async (categoryId) => {
 
     if(videoDataLoading > 0) {
         videoData.data.forEach(cateVideo => {
-            console.log(cateVideo?.others.views.split( " "));
+            // console.log(cateVideo?.others.views);
             const allSeconds = cateVideo.others.posted_date;
             const allSecondsParseFloat = parseFloat(allSeconds);
             const seconds = allSecondsParseFloat;
@@ -86,7 +87,19 @@ const loadVideoContainer = async (categoryId) => {
         noVideoAvailable.appendChild(zeroVideoContainer);
     }
 
+    sortbyviews(transitionSortForViews);
+
 };
+
+// =================================================================
+const sortbyviews = (sortByViews) => {
+    // console.log(sortByViews.data); 
+    const findCategory = sortByViews.data;
+    findCategory.forEach(views => console.log(views?.others.views));
+};
+// =================================================================
+
+
 
 loadVideoContainer("1000")
 
