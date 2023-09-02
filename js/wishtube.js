@@ -12,7 +12,7 @@ const buttonsCategory = async () => {
         // create button by createElement
         const button = document.createElement('button');
         button.innerHTML = `
-        <button onclick="loadVideoContainer('${category.category_id}')" class="mx-[5px] md:mx-0 lg:mx-0 xl:mx-0 px-3 md:px-5 lg:px-7 py-2 rounded-sm bg-[#25252526] text-black font-medium text-base">${category.category}</button>
+        <button onclick="loadVideoContainer('${category.category_id}')" class="mx-[5px] my-2 md:my-0 lg:my-0 xl:my-0 md:mx-0 lg:mx-0 xl:mx-0 px-3 md:px-5 lg:px-7 py-2 rounded-sm bg-[#25252526] text-black font-medium text-base">${category.category}</button>
         `;
         buttonsContainer.appendChild(button);
     });
@@ -44,7 +44,6 @@ const loadVideoContainer = async (categoryId) => {
             const allSeconds = cateVideo.others.posted_date;
             const allSecondsParseFloat = parseFloat(allSeconds);
             const seconds = allSecondsParseFloat;
-            console.log(allSecondsParseFloat);
 
             // =================================================
             const hours = Math.floor(seconds / 3600);
