@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wish Tube</title>
+    <!-- custom css -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- tailwind and daisyUI -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.4/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="inter">
+    <!-- header area start -->
+    <header>
+        <ul class="md:flex lg:flex justify-between items-center text-center px-4 md:px-5 lg:px-10 pt-8">
+            <li class="list-none text-3xl text-[#252525] font-bold mb-3 md:mb-0 lg:mb-0 xl:mb-0 "><span class="text-[#FF1F3D]">Wish</span> Tube</li>
+            <li class="list-none mb-3 md:mb-0 lg:mb-0 xl:mb-0 "><button class="px-5 py-2 bg-[#25252533] rounded-sm">Sort by view</button></li>
+            <li class="list-none"><button class="px-5 py-2 bg-[#FF1F3D] text-white rounded-sm hover:text-black">blog</button></li>
+        </ul>
+    </header>
+    <!-- main area start -->
+    <main>
+        <!-- dynamic button div start here -->
+        <div id="buttons_category" class="flex justify-center text-center gap-4 lg:m-10">
+            
+        </div>
+
+        <!-- fetch content load container start here -->
+        <div id="videos_container" class=" grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 px-4 md:px-5 lg:px-10 gap-5">
+            <!-- <div class="mb-4 md:mb-0 lg:mb-0 xl:mb-0 bg-gray-50 rounded-lg">
+                <div class="mb-5">
+                    <img class="w-full h-[220px] rounded-t-lg" src="img/img.jpg" alt="">
+                    <p class="font-normal text-xs float-right text-white relative -mt-12 mr-5 bg-black py-2 px-5 rounded"><span>3</span>hrs <span>50</span>min <span>ago</span></p>
+                </div>
+                <div class="flex justify-between gap-3 items-start px-2 py-5">
+                    <img src="img/Ellipse 1.svg" alt="">
+                    <div class="text-left">
+                        <h2 class="text-base text-[#171717] font-bold mb-1">Building a Winning UX Strategy Using the Kano Model</h2>
+                        <p class="text-sm font-normal">Awlad Hossain</p>
+                        <p class="text-sm font-normal">91K views</p>
+                    </div>
+                </div>
+            </div> -->
+            
+        </div>
+        
+    </main>
+    <!-- footer area start -->
+    <footer>
+
+    </footer>
+
+
+    <!-- custom js -->
+    <script src="js/wishtube.js"></script>
+</body>
+</html>
