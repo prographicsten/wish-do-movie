@@ -41,7 +41,7 @@ const loadVideoContainer = async (categoryId) => {
 
     if(videoDataLoading > 0) {
         videoData.data.forEach(cateVideo => {
-            // console.log(cateVideo);
+            console.log(cateVideo?.others.views.split( " "));
             const allSeconds = cateVideo.others.posted_date;
             const allSecondsParseFloat = parseFloat(allSeconds);
             const seconds = allSecondsParseFloat;

@@ -14,39 +14,38 @@
     <!-- header area start -->
     <header>
         <ul class="md:flex lg:flex justify-between items-center text-center px-4 md:px-5 lg:px-10 pt-8">
-            <li id="wish_tube" class="list-none text-3xl text-[#252525] font-bold mb-3 md:mb-0 lg:mb-0 xl:mb-0 "><span class="text-[#FF1F3D]">Wish</span> Tube</li>
-            <li id="" class="list-none mb-6 md:mb-0 lg:mb-0 xl:mb-0 "><button class="px-5 py-2 bg-[#25252533] rounded-sm">Sort by view</button></li>
+            <li id="wish_tube" class="list-none text-3xl text-[#252525] font-bold mb-6 md:mb-0 lg:mb-0 xl:mb-0 "><span class="text-[#FF1F3D]">Wish</span> Tube</li>
             <li id="blog_content" class="list-none"><a class="px-5 py-2 bg-[#FF1F3D] text-white rounded-sm hover:text-black" href="index.html">Home</a></li>
         </ul>
     </header>
     <!-- main area start -->
     <main class="px-4 md:px-5 lg:px-20 mt-14 mb-10">
-        <p class="text-xs md:text-sm lg:text-base"><b>Introduction:</b>
+        <p class="text-sm lg:text-base"><b>Introduction:</b>
             In the world of web development, understanding the fundamental concepts of JavaScript is crucial. In this blog post, we will dive into three important aspects of JavaScript: variables (<b>var</b>, <b>let</b>, and <b>const</b>), null and undefined, and REST API. By the end of this article, you'll have a solid grasp of these concepts and their practical use cases.</p>
 
         <div>
             <h2 class="text-xl font-bold mt-5">1. Scope of var, let, and const:</h2>
-            <li class="text-xs md:text-sm lg:text-base mt-4">Variables in JavaScript are essential for storing and manipulating data. JavaScript offers three ways to declare variables: <b>var</b>, <b>let</b>, and <b>const</b>.</li>
-            <li class="text-xs md:text-sm lg:text-base mt-4"><b>var:</b> Declaring a variable with var has function-level scope. It means that the variable is accessible throughout the entire function it's declared in. </li>
-            <li class="text-xs md:text-sm lg:text-base mt-4"><b>let:</b> Introduced in ES6, let provides block-level scope. It allows you to define variables with limited visibility, mainly within the block or statement they are defined in, such as loops or conditionals. </li>
-            <li class="text-xs md:text-sm lg:text-base mt-4"><b>const:</b> Like let, const also has block-level scope, but it comes with an additional feature: it creates constants that cannot be reassigned after their initial value is set. </li>
-            <li class="text-xs md:text-sm lg:text-base mt-4"><b></b> Understanding the scope of these declarations is crucial for avoiding unexpected behavior in your JavaScript code. </li>
+            <li class="text-sm lg:text-base mt-4">Variables in JavaScript are essential for storing and manipulating data. JavaScript offers three ways to declare variables: <b>var</b>, <b>let</b>, and <b>const</b>.</li>
+            <li class="text-sm lg:text-base mt-4"><b>var:</b> Declaring a variable with var has function-level scope. It means that the variable is accessible throughout the entire function it's declared in. </li>
+            <li class="text-sm lg:text-base mt-4"><b>let:</b> Introduced in ES6, let provides block-level scope. It allows you to define variables with limited visibility, mainly within the block or statement they are defined in, such as loops or conditionals. </li>
+            <li class="text-sm lg:text-base mt-4"><b>const:</b> Like let, const also has block-level scope, but it comes with an additional feature: it creates constants that cannot be reassigned after their initial value is set. </li>
+            <li class="text-sm lg:text-base mt-4"><b></b> Understanding the scope of these declarations is crucial for avoiding unexpected behavior in your JavaScript code. </li>
         </div>
 
         <div>
             <h2 class="text-xl font-bold mt-10">2. Use Cases of null and undefined:</h2>
-            <li class="text-xs md:text-sm lg:text-base mt-4"><b>null</b> and <b>undefined</b> are both used to represent missing or empty values in JavaScript, but they have different meanings and use cases.</li>
-            <li class="text-xs md:text-sm lg:text-base mt-4"><b>undefined:</b> A variable that has been declared but has not been assigned any value automatically has the value undefined. It is often used as a placeholder for missing values or uninitialized variables. </li>
-            <li class="text-xs md:text-sm lg:text-base mt-4"><b>null:</b>  Unlike <b>undefined</b>, null is explicitly assigned to a variable by the developer. It signifies an intentional absence of any object value or no value at all. </li>
-            <li class="text-xs md:text-sm lg:text-base mt-4"> Use <b>undefined</b> for variables that are expected to have a value later but don't yet, and use null when you want to represent that a variable has no value. </li>
+            <li class="text-sm lg:text-base mt-4"><b>null</b> and <b>undefined</b> are both used to represent missing or empty values in JavaScript, but they have different meanings and use cases.</li>
+            <li class="text-sm lg:text-base mt-4"><b>undefined:</b> A variable that has been declared but has not been assigned any value automatically has the value undefined. It is often used as a placeholder for missing values or uninitialized variables. </li>
+            <li class="text-sm lg:text-base mt-4"><b>null:</b>  Unlike <b>undefined</b>, null is explicitly assigned to a variable by the developer. It signifies an intentional absence of any object value or no value at all. </li>
+            <li class="text-sm lg:text-base mt-4"> Use <b>undefined</b> for variables that are expected to have a value later but don't yet, and use null when you want to represent that a variable has no value. </li>
         </div>
 
         <div>
             <h2 class="text-xl font-bold mt-10">3. Understanding REST API:</h2>
-            <li class="text-xs md:text-sm lg:text-base mt-4">REST stands for Representational State Transfer, and it is an architectural style for designing networked applications.</li>
-            <li class="text-xs md:text-sm lg:text-base mt-4">A REST API is a set of rules and conventions that allow different software applications to communicate with each other over the internet using standard HTTP methods. </li>
-            <li class="text-xs md:text-sm lg:text-base mt-4">RESTful APIs are designed around resources, which are represented as URLs. These resources can be manipulated using standard HTTP methods like GET (retrieve data), POST (create data), PUT (update data), and DELETE (remove data). </li>
-            <li class="text-xs md:text-sm lg:text-base mt-4"> RESTful APIs are stateless, meaning each request from a client to a server must contain all the information needed to understand and process the request. </li>
+            <li class="text-sm lg:text-base mt-4">REST stands for Representational State Transfer, and it is an architectural style for designing networked applications.</li>
+            <li class="text-sm lg:text-base mt-4">A REST API is a set of rules and conventions that allow different software applications to communicate with each other over the internet using standard HTTP methods. </li>
+            <li class="text-sm lg:text-base mt-4">RESTful APIs are designed around resources, which are represented as URLs. These resources can be manipulated using standard HTTP methods like GET (retrieve data), POST (create data), PUT (update data), and DELETE (remove data). </li>
+            <li class="text-sm lg:text-base mt-4"> RESTful APIs are stateless, meaning each request from a client to a server must contain all the information needed to understand and process the request. </li>
         </div>
 
         <p class="mt-12"><strong>Conclusion:</strong>
