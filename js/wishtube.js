@@ -12,7 +12,7 @@ const buttonsCategory = async () => {
         // create button by createElement
         const button = document.createElement('button');
         button.innerHTML = `
-        <button onclick="loadVideoContainer('${category.category_id}')" class="mx-[5px] md:mx-0 lg:mx-0 xl:mx-0 px-4 md:px-5 lg:px-7 py-2 rounded-sm bg-[#25252526] text-black font-medium text-base">${category.category}</button>
+        <button onclick="loadVideoContainer('${category.category_id}')" class="mx-[5px] md:mx-0 lg:mx-0 xl:mx-0 px-3 md:px-5 lg:px-7 py-2 rounded-sm bg-[#25252526] text-black font-medium text-base">${category.category}</button>
         `;
         buttonsContainer.appendChild(button);
     });
