@@ -40,13 +40,15 @@ const loadVideoContainer = async (categoryId) => {
 
     if(videoDataLoading > 0) {
         videoData.data.forEach(cateVideo => {
-            console.log(cateVideo);
-            console.log(cateVideo.authors[0].profile_picture);
+            // console.log(cateVideo);
+            const allSeconds = cateVideo.others.posted_date;
+            const allSecondsParseFloat = parseFloat(allSeconds);
+            const seconds = allSecondsParseFloat;
+            console.log(allSecondsParseFloat);
 
             // =================================================
-            // const allSeconds = cateVideo.others.posted_date;
-
-            // const allSecondsParseFloat = parseFloat(allSeconds);
+            const hours = Math.floor(seconds / 3600);
+            const minutes = Math.floor((seconds % 3600) / 60);
 
 
 
@@ -58,7 +60,7 @@ const loadVideoContainer = async (categoryId) => {
             singlevideoContent.innerHTML = `
             <div class="mb-5">
                 <img class="w-full h-[220px] rounded-t-lg" src="${cateVideo?.thumbnail}" alt="">
-                <p class="font-normal text-xs float-right text-white relative -mt-12 mr-5 bg-black py-2 px-5 rounded"><span>3</span>hrs <span>50</span>min <span>ago</span></p>
+                ${hours && minutes ? `<p class="font-normal text-xs float-right text-white relative -mt-12 mr-5 bg-black py-2 px-5 rounded">${hours}hrs ${minutes}min ago</p>` : ""}
             </div>
             <div class="flex  gap-5 items-start px-2 pt-3 pb-5">
                 <img class="w-10 h-10 rounded-full" src="${cateVideo?.authors[0].profile_picture}" alt="">
