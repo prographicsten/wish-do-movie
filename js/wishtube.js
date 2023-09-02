@@ -12,7 +12,7 @@ const buttonsCategory = async () => {
         // create button by createElement
         const button = document.createElement('button');
         button.innerHTML = `
-        <button onclick="loadVideoContainer('${category.category_id}')" class="mx-[5px] my-2 md:my-0 lg:my-0 xl:my-0 md:mx-0 lg:mx-0 xl:mx-0 px-3 md:px-5 lg:px-7 py-2 rounded-sm bg-[#25252526] text-black font-medium text-base">${category.category}</button>
+        <button id="active_btn" onclick="loadVideoContainer('${category.category_id}')" class="mx-[5px] my-2 md:my-0 lg:my-0 xl:my-0 md:mx-0 lg:mx-0 xl:mx-0 px-3 md:px-5 lg:px-7 py-2 rounded-sm bg-[#25252526] text-black font-medium text-base">${category.category}</button>
         `;
         buttonsContainer.appendChild(button);
     });
@@ -29,6 +29,10 @@ const loadVideoContainer = async (categoryId) => {
     const videoData = await loadVideos.json();
     const videoDataLoading = videoData.data.length;
     // console.log(videoData.data);
+
+    // =================================================================
+    
+    // =================================================================
     
     // no content available
     const noVideoAvailable = document.getElementById('no_content_available');
@@ -66,7 +70,10 @@ const loadVideoContainer = async (categoryId) => {
                 <img class="w-10 h-10 rounded-full" src="${cateVideo?.authors[0].profile_picture}" alt="">
                 <div >
                     <h2 class="text-base text-[#171717] font-bold mb-1">${cateVideo.title}</h2>
-                    <p class="text-sm font-normal mb-1">${cateVideo?.authors[0].profile_name}</p>
+                    <span class="grid grid-cols-2 gap-3">
+                        <p class="text-sm font-normal mb-1">${cateVideo?.authors[0].profile_name}</p> 
+                        <p>${cateVideo?.authors[0]?.verified ? `<img class="w-5 h-5 rounded-full" src="img/icons8-verified-48.png" alt="">` : ""}</p>
+                    </span>
                     <p class="text-sm font-normal">${cateVideo?.others.views}</p>
                 </div>
             </div>
